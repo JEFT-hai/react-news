@@ -123,8 +123,7 @@
 5. 详情页
 * 获取网址参数: this.props.match.params.uniquekey
 * 非DOM属性dangerouslySetinnerHTML标签
-  * <div className="articleContainer" dangerouslySetInnerHTML={this.createMarkup()}></div>
+  * createMarkup() { return { _ _ html: this.state.newsItem.pagecontent} ;};
+  * < div className="articleContainer" dangerouslySetInnerHTML={this.createMarkup()}></div>
   * componentDidMount(){} 中获取this.state.newsItem
-  * createMarkup() { return { __html: this.state.newsItem.pagecontent} ;};
-  
 6. 评论模块
