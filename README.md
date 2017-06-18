@@ -71,8 +71,8 @@
 		 　localStorage.userNickName = '';<br>
 		 　this.setState({hasLogined:false});<br>
 	  };
-* mobile 
-  * mobile_header login点击图标显示modal，eventProxy.on监听hasLogined事件<br>
+* mobile
+  * mobile_header login点击图标显示modal，eventProxy.on监听hasLogined事件<br>
     login(){<br>
 		 　　this.setModalVisible(true);<br>
 	 　};<br>
@@ -84,7 +84,7 @@
         　});<br>
       　});<br>
     }<br>
-   * mobile_usercenter 在另一个插件中退出logout要使用eventProxy函数触发hasLogined
+  * mobile_usercenter 在另一个插件中退出logout要使用eventProxy函数触发hasLogined
     logout(){<br>
       　localStorage.React_userid = '';<br>
       　localStorage.userNickName = '';<br>
