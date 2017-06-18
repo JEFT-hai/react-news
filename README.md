@@ -42,6 +42,10 @@
   * < Row>< Col span={2}></Col>< Col span={22}></Col></Row>
 * BackTop:
   * <BackTop />直接放到页面尾部就好了
+* Form
+  * let {getFieldDecorator} = this.props.form;
+  * {getFieldDecorator('r_userName')(<Input placeholder="请输入您的账号" />)}
+  * var formData = this.props.form.getFieldsValue();
 2. 登录与注册
 * this.state = {
 		current: 'top',(Menu选中的状态)<br>
