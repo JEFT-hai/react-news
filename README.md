@@ -16,8 +16,8 @@
 ##### 知识点
 1. 到的的antd
 * Carousel:　
-  *　const setting = {dots: true,infinite: true,speed: 500,slidesToShow: 1,autoplay: true};<br>
-  *　< Carousel {...setting}><div>< img src={require('../../images/carousel_1.jpg')} /></div></Carousel>)<br>
+  1. const setting = {dots: true,infinite: true,speed: 500,slidesToShow: 1,autoplay: true};<br>
+  2. < Carousel {...setting}>< div>< img src={require('../../images/carousel_1.jpg')} /></div></Carousel>)<br>
 * Menu,(表单框架<Menu mode="horizontal" selectedKeys={[this.state.current]} onClick={this.handleClick.bind(this)} ><br><Menu.Item key="mail"><Icon type="mail" />Navigation One</Menu.Item>）<br>
 * Icon,　（< Icon type="appstore" />）<br>
 * Tabs,　(< Tabs type="card" onChange={this.callback.bind(this)}><TabPane tab="登录" key="1"></Tabpane></Tabs>)(callback根据key的值选择登陆还是注册）<br>
