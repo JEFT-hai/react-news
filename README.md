@@ -16,15 +16,15 @@
 ##### 知识点
 1. 到的的antd
 * Carousel:
-  * 设置setting　const setting = {dots: true,infinite: true,speed: 500,slidesToShow: 1,autoplay: true};
+  * 设置setting　const setting = {dots: true,infinite: true,speed: 500,slidesToShow: 1,autoplay: true};
   * < Carousel {...setting}>< div>< img src={require('../../images/carousel_1.jpg')} /></div></Carousel>
 * Menu:
   * < Menu mode="horizontal" selectedKeys={[this.state.current]} onClick={this.handleClick.bind(this)} >
   * < Menu.Item key="top"><Icon type="appstore" />头条</Menu.Item>  </Menu>
 * Icon:　
   * < Icon type="appstore" /><br>
-* Tabs:　
-  * < Tabs type="card" onChange={this.callback.bind(this)}><TabPane tab="登录" key="1"></Tabpane></Tabs>
+* Tabs:
+  * < Tabs type="card" onChange={this.callback.bind(this)}><TabPane tab="登录" key="1"></Tabpane></Tabs>
   * callback根据key的值选择登陆还是注册
 * Input:
   * const {getFieldDecorator} = this.props.form;
