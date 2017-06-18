@@ -84,7 +84,7 @@
         　});<br>
       　});<br>
     }<br>
-  * mobile_usercenter 在另一个插件中退出logout要使用eventProxy函数触发hasLogined
+   * mobile_usercenter 在另一个插件中退出logout要使用eventProxy函数触发hasLogined
     logout(){<br>
       　localStorage.React_userid = '';<br>
       　localStorage.userNickName = '';<br>
