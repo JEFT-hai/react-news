@@ -90,4 +90,13 @@
       　localStorage.userNickName = '';<br>
       　eventProxy.trigger('hasLogined', false);<br>
     }<br>
-    
+3. 用fetch()获取数据
+  * 登录与注册 改变action="+this.state.action+ "的action状态决定登录还是注册
+  * 设置标签标题 document.title = this.state.newsItem.title + " - React News | React 驱动的新闻平台";
+  * fetch()
+      　.then(response=>response.json())<br>
+      　.then(json=>{<br>
+       　 this.setState({xxx:json});<br>
+      　})<br>
+4. 详情页
+  
