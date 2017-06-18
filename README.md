@@ -40,7 +40,8 @@
 * Row:
   * Row,Col类似栅格系统，平分24分 用法　
   * < Row>< Col span={2}></Col>< Col span={22}></Col></Row>
-  
+* BackTop:
+  * <BackTop />直接放到页面尾部就好了
 2. 登录与注册
 * this.state = {
 		current: 'top',(Menu选中的状态)<br>
@@ -98,5 +99,32 @@
       　.then(json=>{<br>
        　 this.setState({xxx:json});<br>
       　})<br>
-4. 详情页
+4. 路由
+* root.js:
+  * import {Route,Switch,HashRouter} from 'react-router-dom';
+  * < HashRouter>
+	< Switch><br>
+		< Route exact path="/" component={PCIndex}></Route><br>
+		< Route path="/details/:uniquekey" component={PCNewsDetails}></Route><br>
+		< Route path="/usercenter" component={PCUserCenter}></Route><br>
+	< /Switch><br>
+　　 < /HashRouter><br>
+* PC_news_block:
+  * news.map((newsItem,index)=>(
+	 　　< li key={index}><br>
+	 　　　<HashRouter><br>
+	 　　　　<Link to={`details/${newsItem.uniquekey}`} target="_blank"><br>
+	 　　　　　　{newsItem.title}<br>
+	 　　　　</Link><br>
+	 　　　</HashRouter><br>
+	 　　< /li><br>
+	))<br>
+	
+5. 详情页
+* 获取网址参数: this.props.match.params.uniquekey
+* 非DOM属性dangerouslySetinnerHTML标签
+  * <div className="articleContainer" dangerouslySetInnerHTML={this.createMarkup()}></div>
+  * componentDidMount(){}中获取this.state.newsItem
+  * createMarkup() {return {__html: this.state.newsItem.pagecontent};};
   
+6. 评论模块
