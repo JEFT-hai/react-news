@@ -1,0 +1,71 @@
+html{
+	font-size: 50px;
+}
+
+#mobileheader{
+	flex: 1;
+	background: #f6f6f6;
+}
+
+#mobileheader header{
+	border-bottom: 1px solid #2db7f5;
+	padding-left: 10px;
+}
+
+#mobileheader header img {
+	height: 50px;
+}
+
+#mobileheader header span {
+	font-size: 35px;
+	vertical-align: top;
+	padding-left: 5px;
+	color: #2db7f5;
+}
+
+#mobileheader i {
+	font-size: 0.5rem;
+	float: right!important;
+	margin-right: 0.3rem;
+	margin-top: 0.3rem;
+	color: #2db7f5;
+}
+
+.m_article {
+	font-size: 14px;
+	margin: 0 .3rem;
+	padding: .2rem 0;
+	border-bottom: 1px solid #e5e5e5;
+}
+.m_article_img {
+	float: left;
+	width: 27%;
+	height: 1.4rem;
+	overflow: hidden;
+	margin-right: .2rem;
+}
+.m_article_img img{
+	width: 100%;
+	display: block;
+	min-height: 1.4rem;
+}
+.m_article .m_article_info {
+    overflow: hidden;
+    padding-bottom: 4px;
+}
+.m_article .m_article_info .m_article_title {
+    text-align: left;
+    font-size: .34rem;
+    margin-bottom: .2rem;
+    color: #404040;
+    line-height: .42rem;
+    width: 100%;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    -webkit-line-break: auto;
+    -webkit-box-orient: vertical;
+}
+.logoutButton {
+	margin: 0 auto;
+}
