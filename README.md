@@ -21,8 +21,8 @@
 * Menu:
   * < Menu mode="horizontal" selectedKeys={[this.state.current]} onClick={this.handleClick.bind(this)} >
   * < Menu.Item key="top"><Icon type="appstore" />头条</Menu.Item>  </Menu>
-* Icon:　
-  * < Icon type="appstore" /><br>
+* Icon:
+  * < Icon type="appstore" />
 * Tabs:
   * < Tabs type="card" onChange={this.callback.bind(this)}><TabPane tab="登录" key="1"></Tabpane></Tabs>
   * callback根据key的值选择登陆还是注册
@@ -30,7 +30,7 @@
   * const {getFieldDecorator} = this.props.form;
   * {getFieldDecorator('userName')(<Input placeholder="请输入您的账号" />)}　　　　　
   * var formData = this.props.form.getFieldsValue();取值<br>
-*　Button:　
+* Button:　
   * < Button type="primary,dashed,ghost" htmlType="button"></Button>
   * 在表单中htmlType="submit"
 * Modal:　
