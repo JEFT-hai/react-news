@@ -16,8 +16,8 @@
 ##### 知识点
 1. 到的的antd
 * Carousel:
-  1. 设置setting　const setting = {dots: true,infinite: true,speed: 500,slidesToShow: 1,autoplay: true};
-  2. < Carousel {...setting}>< div>< img src={require('../../images/carousel_1.jpg')} /></div></Carousel>
+  * 设置setting　const setting = {dots: true,infinite: true,speed: 500,slidesToShow: 1,autoplay: true};
+  * < Carousel {...setting}>< div>< img src={require('../../images/carousel_1.jpg')} /></div></Carousel>
 * Menu:
   1. < Menu mode="horizontal" selectedKeys={[this.state.current]} onClick={this.handleClick.bind(this)} >
   2. < Menu.Item key="top"><Icon type="appstore" />头条</Menu.Item>  </Menu>
