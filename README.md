@@ -19,22 +19,25 @@
   * 设置setting　const setting = {dots: true,infinite: true,speed: 500,slidesToShow: 1,autoplay: true};
   * < Carousel {...setting}>< div>< img src={require('../../images/carousel_1.jpg')} /></div></Carousel>
 * Menu:
-  1. < Menu mode="horizontal" selectedKeys={[this.state.current]} onClick={this.handleClick.bind(this)} >
-  2. < Menu.Item key="top"><Icon type="appstore" />头条</Menu.Item>  </Menu>
-* Icon:　（< Icon type="appstore" />）<br>
-* Tabs:　(< Tabs type="card" onChange={this.callback.bind(this)}><TabPane tab="登录" key="1"></Tabpane></Tabs>)(callback根据key的值选择登陆还是注册）<br>
-*　Input:
-  1. const {getFieldDecorator} = this.props.form;
-  2. {getFieldDecorator('userName')(<Input placeholder="请输入您的账号" />)}　　　　　
-  3. var formData = this.props.form.getFieldsValue();取值<br>
+  * < Menu mode="horizontal" selectedKeys={[this.state.current]} onClick={this.handleClick.bind(this)} >
+  * < Menu.Item key="top"><Icon type="appstore" />头条</Menu.Item>  </Menu>
+* Icon:　
+  * < Icon type="appstore" /><br>
+* Tabs:　
+  * < Tabs type="card" onChange={this.callback.bind(this)}><TabPane tab="登录" key="1"></Tabpane></Tabs>
+  * callback根据key的值选择登陆还是注册
+* Input:
+  * const {getFieldDecorator} = this.props.form;
+  * {getFieldDecorator('userName')(<Input placeholder="请输入您的账号" />)}　　　　　
+  * var formData = this.props.form.getFieldsValue();取值<br>
 *　Button:　
-  1. < Button type="primary,dashed,ghost" htmlType="button"></Button>
-  2. 在表单中htmlType="submit"
+  * < Button type="primary,dashed,ghost" htmlType="button"></Button>
+  * 在表单中htmlType="submit"
 * Modal:　
-  1. < Modal title="用户中心" wrapClassName="vertical-center-modal" visible={this.state.modalVisible}
-  2. onCancel={()=>this.setModalVisible(false)}
-  3. onOk={()=>this.setModalVisible(false)} okText="关闭">　visible控制显隐
+  * < Modal title="用户中心" wrapClassName="vertical-center-modal" visible={this.state.modalVisible}
+  * onCancel={()=>this.setModalVisible(false)}
+  * onOk={()=>this.setModalVisible(false)} okText="关闭">　visible控制显隐
 * Row:
-  1. Row,Col类似栅格系统，平分24分 用法　
-  2. < Row>< Col span={2}></Col>< Col span={22}></Col></Row>
+  * Row,Col类似栅格系统，平分24分 用法　
+  * < Row>< Col span={2}></Col>< Col span={22}></Col></Row>
 * Col<br>
