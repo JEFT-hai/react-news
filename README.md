@@ -16,14 +16,20 @@
 ##### 知识点
 1. 到的的antd
 * Carousel:　
-  1. const setting = {dots: true,infinite: true,speed: 500,slidesToShow: 1,autoplay: true};<br>
+  1. 设置setting　const setting = {dots: true,infinite: true,speed: 500,slidesToShow: 1,autoplay: true};<br>
   2. < Carousel {...setting}>< div>< img src={require('../../images/carousel_1.jpg')} /></div></Carousel>)<br>
-* Menu,(表单框架<Menu mode="horizontal" selectedKeys={[this.state.current]} onClick={this.handleClick.bind(this)} ><br><Menu.Item key="mail"><Icon type="mail" />Navigation One</Menu.Item>）<br>
-* Icon,　（< Icon type="appstore" />）<br>
-* Tabs,　(< Tabs type="card" onChange={this.callback.bind(this)}><TabPane tab="登录" key="1"></Tabpane></Tabs>)(callback根据key的值选择登陆还是注册）<br>
-*　Input,　const {getFieldDecorator} = this.props.form;（{getFieldDecorator('userName')(<Input placeholder="请输入您的账号" />)}）　　　　　var formData = this.props.form.getFieldsValue();取值<br>
-*　Button,　（< Button type="primary,dashed,ghost" htmlType="button"></Button>）在表单中htmlType="submit"<br>
-* Modal,　(< Modal title="用户中心" wrapClassName="vertical-center-modal" visible={this.state.modalVisible}<br>
+* Menu:
+  1. < Menu mode="horizontal" selectedKeys={[this.state.current]} onClick={this.handleClick.bind(this)} ><br>
+  2. < Menu.Item key="top"><Icon type="appstore" />头条</Menu.Item>  </Menu><br>
+* Icon:　（< Icon type="appstore" />）<br>
+* Tabs:　(< Tabs type="card" onChange={this.callback.bind(this)}><TabPane tab="登录" key="1"></Tabpane></Tabs>)(callback根据key的值选择登陆还是注册）<br>
+*　Input:
+  1. const {getFieldDecorator} = this.props.form;
+  2. {getFieldDecorator('userName')(<Input placeholder="请输入您的账号" />)}　　　　　
+  3. var formData = this.props.form.getFieldsValue();取值<br>
+*　Button:　（< Button type="primary,dashed,ghost" htmlType="button"></Button>）在表单中htmlType="submit"<br>
+* Modal:　
+  1. < Modal title="用户中心" wrapClassName="vertical-center-modal" visible={this.state.modalVisible}<br>
 			      onCancel={()=>this.setModalVisible(false)}<br>
 			      onOk={()=>this.setModalVisible(false)} okText="关闭">)　visible控制显隐<br>
 * Row,　（Row,Col类似栅格系统，平分24分 用法　< Row>< Col span={2}></Col>< Col span={22}></Col></Row><br>
