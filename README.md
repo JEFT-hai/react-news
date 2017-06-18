@@ -42,16 +42,16 @@
   * < Row>< Col span={2}></Col>< Col span={22}></Col></Row>
   
 2. 登录与注册
-  * this.state = {
-			  　 current: 'top',(Menu选中的状态)<br>
-			 　　modalVisible: false,(是否可见)<br>
-			 　　action: 'login',(登录还是注册)<br>
-			 　　hasLogined: false,(是否登录)<br>
-		  　　userNickName: '',(缓存用户名)<br>
-			 　　userid: 0(用户id)<br>
+* this.state = {
+		current: 'top',(Menu选中的状态)<br>
+		modalVisible: false,(是否可见)<br>
+		action: 'login',(登录还是注册)<br>
+	        hasLogined: false,(是否登录)<br>
+		userNickName: '',(缓存用户名)<br>
+		userid: 0(用户id)<br>
 		 　};<br>
-  * setModalVisible(value){ this.setState({modalVisible:value}); };
-  * PC端 通过Menu的handleClick事件控制modal的显示，通过Tabs的callback事件传递"登录"还是"注册",louout事件清除缓存，设置未登录状态=》显示注册/登录
+* setModalVisible(value){ this.setState({modalVisible:value}); };
+* PC端 通过Menu的handleClick事件控制modal的显示，通过Tabs的callback事件传递"登录"还是"注册",louout事件清除缓存，设置未登录状态=》显示注册/登录
   　handleClick(e){<br>
 		 　if (e.key=="register") {<br>
 			 　this.setState({current:'register'});<br>
@@ -71,8 +71,8 @@
 		 　localStorage.userNickName = '';<br>
 		 　this.setState({hasLogined:false});<br>
 	  };
-  * mobile 
-    * mobile_header login点击图标显示modal，eventProxy.on监听hasLogined事件<br>
+* mobile 
+  * mobile_header login点击图标显示modal，eventProxy.on监听hasLogined事件<br>
     login(){<br>
 		 　　this.setModalVisible(true);<br>
 	 　};<br>
@@ -84,7 +84,7 @@
         　});<br>
       　});<br>
     }<br>
-    * mobile_usercenter 在另一个插件中退出logout要使用eventProxy函数触发hasLogined
+  * mobile_usercenter 在另一个插件中退出logout要使用eventProxy函数触发hasLogined
     logout(){<br>
       　localStorage.React_userid = '';<br>
       　localStorage.userNickName = '';<br>
