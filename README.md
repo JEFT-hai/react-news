@@ -48,6 +48,8 @@
   * var formData = this.props.form.getFieldsValue();
 * notification
   * fetch().then(response => response.json()).then(json => {notification['success']({message:'ReactNews提醒',description:'收藏此文章成功'});});
+* card
+  * 设置链接可以在Card标签中 extra={< a href={`/#/details/${uc.uniquekey}`}>查看</a>}
 2. 登录与注册
 * this.state = {
 		current: 'top',(Menu选中的状态)<br>
@@ -139,5 +141,5 @@
 8. 个人中心
 * 通过fetch()获取数据usercollection,usercomments之后渲染(?:;)
 * 头像设置
-  * <Upload {...props}><Icon type="plus" /><div className="ant-upload-text">上传照片</div></Upload> render()时定义props
+  * < Upload {...props}><Icon type="plus" />< div className="ant-upload-text">上传照片</div></Upload> render()时定义props
   * 要设置Modal: 点击头像详情展示modal
