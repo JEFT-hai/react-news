@@ -46,6 +46,8 @@
   * let {getFieldDecorator} = this.props.form;
   * {getFieldDecorator('r_userName')(<Input placeholder="请输入您的账号" />)}
   * var formData = this.props.form.getFieldsValue();
+* notification
+  * fetch().then(response => response.json()).then(json => {notification['success']({message:'ReactNews提醒',description:'收藏此文章成功'});});
 2. 登录与注册
 * this.state = {
 		current: 'top',(Menu选中的状态)<br>
@@ -131,3 +133,11 @@
   * < div className="articleContainer" dangerouslySetInnerHTML={this.createMarkup()}></div>
   * componentDidMount(){} 中获取this.state.newsItem
 6. 评论模块
+* <Form onSubmit = {this.handleSubmit.bind(this)}> handleSubmit函数fetch()方法提交数据之后再用componentDidMount函数fetch()方法获取评论数据之后渲染
+7. 收藏功能
+* fecth()传入userid与uniquekey，执行notification['success']({message:'ReactNews提醒',description:'收藏此文章成功'});
+8. 个人中心
+* 通过fetch()获取数据usercollection,usercomments之后渲染(?:;)
+* 头像设置
+  * <Upload {...props}><Icon type="plus" /><div className="ant-upload-text">上传照片</div></Upload> render()时定义props
+  * 要设置Modal: 点击头像详情展示modal
