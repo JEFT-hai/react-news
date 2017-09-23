@@ -11,7 +11,8 @@ import {
     CheckBox,
     Modal,
     Card,
-    notification
+    notification,
+    Upload
 } from 'antd';
 const FromItem = Form.Item;
 const SubMenu = Menu.SubMenu;
@@ -36,7 +37,12 @@ export default class mobileUserCenter extends React.Component {
       var myFetchOptions = {
         method: 'GET'
       };
-      fetch("http://newsapi.gugujiankong.com/Handler.ashx?action=getuc&userid="+localStorage.React_userid,myFetchOptions)
+      fetch(("http://newsapi.gugujiankong.com/Handler.ashx?action=getuc&userid="+localStorage.React_userid,myFetchOptions),{
+        method: "POST",
+  mode: "no-cors",
+  headers: {
+    "Content-Type": "application/x-www-form-urlencoded"
+  })
       .then(response=>response.json())
       .then(json=>{
         this.setState({usercollection:json});
@@ -55,11 +61,9 @@ export default class mobileUserCenter extends React.Component {
     }
 
     logout(){
-      console.log(1)
       localStorage.React_userid = '';
       localStorage.userNickName = '';
       eventProxy.trigger('hasLogined', false);
-
     }
     
     render(){
@@ -84,7 +88,6 @@ export default class mobileUserCenter extends React.Component {
         };
 
         const {usercollection,usercomments} = this.state;
-        console.log(this.state.usercomments)
         const usercollectionList = usercollection.length
               ?
               usercollection.map((uc,index)=>(
@@ -129,7 +132,17 @@ export default class mobileUserCenter extends React.Component {
                         </Row>
                       </div>
                     </TabPane>
-                    <TabPane tab="头像设置" key="3"></TabPane>
+                    <TabPane tab="头像设置" key="3">
+                      <div className="clearfix">
+                        <Upload {...props}>
+                          <Icon type="plus" />
+                          <div className="ant-upload-text">上传照片</div>
+                        </Upload>
+                        <Modal visible = {this.state.previewVisible} footer={null} onCancel={this.handleCancel.bind(this)}>
+                          <img alt="预览" src={this.state.previewImage} />
+                        </Modal>
+                      </div>
+                    </TabPane>
                     <TabPane tab="退出登录" key="4">
                       <br />
                       <Row>

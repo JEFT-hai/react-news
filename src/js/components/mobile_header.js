@@ -101,7 +101,6 @@ class MobileHeader extends React.Component{
           hasLogined
         });
       });
-    console.log(localStorage.React_userid)
     }
 
 	render() {
